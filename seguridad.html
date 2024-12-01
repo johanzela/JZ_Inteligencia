@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Seguridad</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <div class="container mx-auto p-8">
+    <!-- Título -->
+    <h1 class="text-4xl font-bold text-center text-green-600 mb-10">Monitoreo - Detalles del Estado - Servicios</h1>
+
+    <!-- Barra de navegación -->
+    <nav class="flex justify-center mb-10">
+      <a href="index.html" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-500 transition">Panel Consolidado</a>
+      <a href="seguridad.html" class="px-6 py-3 bg-green-600 text-white rounded-full font-bold shadow-lg hover:bg-green-500 transition ml-4">Tabla de consultas</a>
+      <a href="indicadores.html" class="px-6 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg hover:bg-purple-500 transition ml-4">Indicador Personalizado</a>
+    </nav>
+
+    <!-- Filtros -->
+    <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+      <div class="grid grid-cols-4 gap-4">
+        <!-- Filtro: Estado del Servicio -->
+        <div>
+          <label for="estado-servicio" class="block text-gray-700 font-bold mb-2">Tipo</label>
+          <select id="estado-servicio" class="block w-full p-2 border border-gray-300 rounded-lg">
+            <option>Todos</option>
+            <option>Máquinas</option>
+            <option>Procesos</option>
+            <option>Clientes</option>
+
+          </select>
+        </div>
+
+        <!-- Filtro: Estado -->
+        <div>
+          <label for="estado" class="block text-gray-700 font-bold mb-2">Detalle</label>
+          <select id="estado" class="block w-full p-2 border border-gray-300 rounded-lg">
+            <option>Todos</option>
+            <option>Estampado</option>
+            <option>Embaladora</option>
+            <option>Textil Andes</option>
+          </select>
+        </div>
+
+        <!-- Filtro: Host -->
+        <div>
+          <label for="host" class="block text-gray-700 font-bold mb-2">Codigo</label>
+          <input id="host" type="text" placeholder="Buscar Host" class="block w-full p-2 border border-gray-300 rounded-lg">
+        </div>
+
+        <!-- Filtro: Grupo de Servicios
+        <div>
+          <label for="grupo-servicios" class="block text-gray-700 font-bold mb-2">Grupo de Servicios</label>
+          <select id="grupo-servicios" class="block w-full p-2 border border-gray-300 rounded-lg">
+            <option>Todos</option>
+            <option>Grupo A</option>
+            <option>Grupo B</option>
+          </select>
+        </div>-->
+      </div>
+
+      <!-- Botón de Filtrar -->
+      <div class="mt-4 text-center">
+        <button class="px-6 py-2 bg-blue-500 text-white font-bold rounded-lg shadow-md hover:bg-blue-600 transition">Filtrar</button>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+      <table class="min-w-full">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">COD</th>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">TIPO</th>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">DETALLE</th>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">DAÑO</th>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">ÚLTIMA VERIFICACIÓN</th>
+            <th class="py-3 px-4 text-left text-sm font-bold text-gray-700">INFORMACIÓN DE ESTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-3 px-4 text-gray-800">A-01</td>
+            <td class="py-3 px-4 text-gray-800">PROCESOS</td>
+            <td class="py-3 px-4 text-green-600 font-bold">ESTAMPADO</td>
+            <td class="py-3 px-4 text-gray-800">21 %</td>
+            <td class="py-3 px-4 text-gray-800">11/02 12:00</td>
+            <td class="py-3 px-4 text-gray-800">Se solicito auditoria</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 text-gray-800">A-01</td>
+            <td class="py-3 px-4 text-gray-800">MAQUINAS</td>
+            <td class="py-3 px-4 text-green-600 font-bold">EMBALADORA</td>
+            <td class="py-3 px-4 text-gray-800">65 %</td>
+            <td class="py-3 px-4 text-gray-800">23/07 15:20</td>
+            <td class="py-3 px-4 text-gray-800">Se solicito mantenimiento </td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4 text-gray-800">A-01</td>
+            <td class="py-3 px-4 text-gray-800">CLIENTE</td>
+            <td class="py-3 px-4 text-green-600 font-bold">Textil Andes</td>
+            <td class="py-3 px-4 text-gray-800">25 mil</td>
+            <td class="py-3 px-4 text-gray-800">08/10 17:15</td>
+            <td class="py-3 px-4 text-gray-800">Reunión con el cliente</td>
+          </tr>
+          <!-- Agrega más filas según sea necesario -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicadores de Gestión de Red</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-900 to-gray-900 text-white font-sans">
+
+  <div class="container mx-auto p-8">
+    <!-- Título -->
+    <h1 class="text-5xl font-extrabold text-center mb-10 text-blue-400">Dashboard de Indicadores de JordaMulticolor</h1>
+
+    <!-- Navegación -->
+    <nav class="flex justify-center mb-10">
+      <a href="index.html" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-500 transition">Panel Consolidado</a>
+      <a href="seguridad.html" class="px-6 py-3 bg-green-600 text-white rounded-full font-bold shadow-lg hover:bg-green-500 transition ml-4">Tabla de consultas</a>
+      <a href="indicadores.html" class="px-6 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg hover:bg-purple-500 transition ml-4">Indicador Personalizado</a>
+    </nav>
+
+    <!-- Imágenes en dos filas -->
+    <div class="grid grid-cols-2 gap-8">
+      <!-- Fila 1 -->
+      <div class="flex flex-col items-center">
+        <h3 class="text-xl font-bold mb-2">CANTIDAD DE TELA DEFECTUOSA POR PROCESO</h3>
+        <img src="Proceso_defect.jpeg" alt="Descripción de la imagen 1" class="w-full max-w-sm h-auto object-cover">
+      </div>
+      <div class="flex flex-col items-center">
+        <h3 class="text-xl font-bold mb-2">METRAJE DE TELA DEFECTUOSA POR MES</h3>
+        <img src="Mes_defect.jpeg" alt="Descripción de la imagen 2" class="w-full max-w-sm h-auto object-cover">
+      </div>
+
+      <!-- Fila 2 -->
+      <div class="flex flex-col items-center">
+        <h3 class="text-xl font-bold mb-2">MONTO DE PERDIDA POR CLIENTE</h3>
+        <img src="Cliente_defects.jpeg" alt="Descripción de la imagen 3" class="w-full max-w-sm h-auto object-cover">
+      </div>
+      <div class="flex flex-col items-center">
+        <h3 class="text-xl font-bold mb-2">DEFECTOS REALIZADOS POR MÁQUINA</h3>
+        <img src="Maquina_defect.jpeg" alt="Descripción de la imagen 4" class="w-full max-w-sm h-auto object-cover">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
